@@ -20,7 +20,7 @@ import java.util.Map;
 @RestController
 @CrossOrigin(origins = "https://localhost:8080")
 @RequestMapping(path = "/api/pessoa")
-@Service
+@Service //não precisa do service aqui
 public class PessoaInsertController {
 
     @Autowired
@@ -38,7 +38,7 @@ public class PessoaInsertController {
                 + " \nNome: " + obj.getNome()));
     }
 
-    @PutMapping(value = "/{id}")
+    @PutMapping(value = "/{id}") // considera usar o @PutMapping("/{id}") faz a mesma coisa
     public ResponseEntity<Pessoa> updatePessoa(@PathVariable(value = "id") Long pessoaId,
                                                @Valid @RequestBody Pessoa pessoaDetails) throws ResourceNotFoundException {
         Pessoa pessoa = pessoaRepository.findById((pessoaId))

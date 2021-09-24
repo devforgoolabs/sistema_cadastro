@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.lang.Nullable;
+import org.springframework.lang.Nullable; //nunca foi usado, melhor deletar
 
 //import javax.persistence.Entity;
 //import javax.persistence.GeneratedValue;
@@ -16,7 +16,7 @@ import java.util.Objects;
 
 @AllArgsConstructor
 @Getter
-@Setter
+@Setter //Verifica o @Data do lombok, substitui quase todas essas anotações
 @NoArgsConstructor
 @Entity(name = "pessoa")
 public  class Pessoa  implements Serializable {
